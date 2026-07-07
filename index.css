@@ -5,7 +5,8 @@
   --bg-surface: rgba(255, 255, 255, 0.03);
   --text-primary: #f3f4f6;
   --text-secondary: #9ca3af;
-  --accent: #f59e0b; /* Warm modern amber */
+  --accent: #f59e0b;
+  /* Warm modern amber */
   --accent-hover: #d97706;
   --border-color: rgba(255, 255, 255, 0.08);
   --font-main: 'Plus Jakarta Sans', sans-serif;
@@ -207,7 +208,7 @@ a {
   object-fit: cover;
   border-radius: 20px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
 
@@ -401,7 +402,9 @@ a {
 }
 
 .social-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 16px;
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
@@ -409,6 +412,7 @@ a {
   font-weight: 500;
   text-center: left;
 }
+
 
 .social-link:hover {
   background: var(--text-primary);
@@ -426,13 +430,18 @@ a {
 
 /* Media Breakpoints for Fluid Responsiveness */
 @media (max-width: 968px) {
-  .hero-container, .about-grid, .contact-wrapper {
+
+  .hero-container,
+  .about-grid,
+  .contact-wrapper {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .hero-image-wrapper {
     order: -1;
   }
+
   .hero-content h1 {
     font-size: 2.75rem;
   }
@@ -440,8 +449,10 @@ a {
 
 @media (max-width: 576px) {
   .nav-links {
-    display: none; /* Accessible burger setup can be injected here */
+    display: none;
+    /* Accessible burger setup can be injected here */
   }
+
   .hero-content h1 {
     font-size: 2.25rem;
   }
